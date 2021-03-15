@@ -6,11 +6,11 @@ int main()
     char b[n][1000],w[1000];
     for(i=0;i<n;i++)
     {
-        scanf(" %1000[^\n]s",b[i]);
+        scanf(" %[^\n]s",b[i]);
     }
-    for(i=0;i<n-1;i++)
+    for(i=0;i<=n;i++)
     {
-        for(j=i+1;j<n;j++)
+        for(j=i+1;j<=n;j++)
         {
             if(strcmp(b[i],b[j])>0)
             {
