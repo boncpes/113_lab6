@@ -1,30 +1,25 @@
 #include<stdio.h>
+#include<string.h>
 int main()
 {
-    int n,i,correct,incorrect;
+    int n,i,c,ic;
     scanf("%d",&n);
-    int b[n],w[n];
-    for(i=0;i<n;i++)
-    {
-        scanf("%d",&b[i]);
-    }
-    for(i=0;i<n;i++)
-    {
-        scanf("%d",&w[i]);
-    }
-    correct=0;
-    incorrect=0;
+    char b[n],w[n];
+    scanf(" %[^\n]s",b);
+    scanf(" %[^\n]s",w);
+    c=0;
+    ic=0;
     for(i=0;i<n;i++)
     {
         if(b[i]==w[i])
         {
-            correct++;
+            c++;
         }
         else
         {
-            incorrect++;
+            ic++;
         }
     }
-    printf("%d %d",correct,incorrect);
+    printf("%d %d",c,ic);
     return 0;
 }
