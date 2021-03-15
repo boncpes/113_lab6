@@ -37,6 +37,13 @@ int main()
             break;
         }
     }
+     for(i=1; i<n; i++)
+    {
+        if(min>student[i]&& student[i]!=0)
+        {
+            min=student[i];
+        }
+    }
     for(i=0; i<n; i++)
     {
         if(min==student[i])
