@@ -1,29 +1,33 @@
 #include<stdio.h>
 int main()
 {
-    int n,q,i,j,x,y,max,k;
+    int n,q,i,j,max,k,x,y,e,f;
     char op;
     scanf("%d %d",&n,&q);
-    int arr[n],pr[n];
+    int arr[n],pr[999];
     for(i=0; i<n; i++)
     {
         arr[i]=0;
-        pr[i]=0;
+    }
+    for(i=0; i<999; i++)
+    {
+        pr[i]=0;;
     }
     k=0;
-    i=0;
-    do
+    for(i=0;i<q;i++)
     {
-        scanf("%c",&op);
+        x=0;
+        y=0;
+        scanf(" %c",&op);
         if(op=='U')
         {
             scanf("%d %d",&x,&y);
             arr[x]=y;
         }
-        if(op=='P')
+        else if(op=='P')
         {
             scanf("%d %d",&x,&y);
-            max=arr[x];
+            max=0;
             for(j=x; j<=y; j++)
             {
                 if(max<arr[j])
@@ -34,9 +38,8 @@ int main()
             pr[k]=max;
             k++;
         }
-        i++;
-    }while(i!=q);
-    for(j=0; j<=k; j++)
+    }
+    for(j=0; j<k; j++)
     {
         printf("%d\n",pr[j]);
     }
