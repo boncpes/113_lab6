@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 int main()
 {
     int n,i,j;
@@ -8,9 +9,9 @@ int main()
     {
         scanf(" %[^\n]s",b[i]);
     }
-    for(i=0;i<=n;i++)
+    for(i=0;i<n-1;i++)
     {
-        for(j=i+1;j<=n;j++)
+        for(j=i+1;j<n;j++)
         {
             if(strcmp(b[i],b[j])>0)
             {
